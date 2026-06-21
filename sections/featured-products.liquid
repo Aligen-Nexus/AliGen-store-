@@ -1,0 +1,63 @@
+<section class="featured-products">
+
+  <div class="section-header">
+    <span>⭐ منتجات مختارة</span>
+    <h2>المنتجات المميزة</h2>
+    <p>
+      اكتشف أفضل المنتجات المختارة بعناية من AliGen Store
+    </p>
+  </div>
+
+  <div class="products-grid">
+
+    {% assign featured_collection = collections['frontpage'] %}
+
+    {% for product in featured_collection.products limit:8 %}
+
+      <div class="product-card">
+
+        <a href="{{ product.url }}">
+
+          {% if product.featured_image %}
+            <img
+              src="{{ product.featured_image | image_url: width: 600 }}"
+              alt="{{ product.title }}"
+              class="product-image"
+            >
+          {% endif %}
+
+          <div class="product-info">
+
+            <h3>{{ product.title }}</h3>
+
+            <div class="product-price">
+              {{ product.price | money }}
+            </div>
+
+            <button class="product-btn">
+              عرض المنتج
+            </button>
+
+          </div>
+
+        </a>
+
+      </div>
+
+    {% endfor %}
+
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Featured Products",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Featured Products"
+    }
+  ]
+}
+{% endschema %}

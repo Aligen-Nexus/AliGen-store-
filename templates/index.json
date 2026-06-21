@@ -2,9 +2,15 @@
   "sections": {
     "hero": {
       "type": "hero"
+    },
+
+    "featured_products": {
+      "type": "featured-products"
     }
   },
+
   "order": [
-    "hero"
+    "hero",
+    "featured_products"
   ]
 }
