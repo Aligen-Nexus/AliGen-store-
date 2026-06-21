@@ -1,0 +1,50 @@
+<section class="newsletter-section">
+
+  <div class="newsletter-container">
+
+    <span class="newsletter-badge">
+      ✉️ اشترك الآن
+    </span>
+
+    <h2>
+      احصل على أحدث العروض والمنتجات الجديدة
+    </h2>
+
+    <p>
+      انضم إلى قائمة AliGen Store البريدية واحصل على إشعارات حصرية وخصومات خاصة.
+    </p>
+
+    {% form 'customer' %}
+
+      <div class="newsletter-form">
+
+        <input
+          type="email"
+          name="contact[email]"
+          placeholder="أدخل بريدك الإلكتروني"
+          required
+        >
+
+        <button type="submit">
+          اشترك الآن
+        </button>
+
+      </div>
+
+    {% endform %}
+
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Newsletter"
+    }
+  ]
+}
+{% endschema %}

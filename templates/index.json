@@ -6,11 +6,34 @@
 
     "featured_products": {
       "type": "featured-products"
-    }
+    },
+
+    "collections_showcase": {
+      "type": "collections-showcase"
+    },
+
+    "special_offer": {
+      "type": "special-offer"
+    },
+
+    "testimonials": {
+      "type": "testimonials"
+    },
+    
+    
+"newsletter": {
+  "type": "newsletter"
+}
   },
 
+
   "order": [
-    "hero",
-    "featured_products"
-  ]
+  "hero",
+  "featured_products",
+  "collections_showcase",
+  "special_offer",
+  "testimonials",
+  "newsletter"
+]
 }
+
